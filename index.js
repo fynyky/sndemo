@@ -1,5 +1,5 @@
 const express = require("express");
-
+const PORT = process.env.PORT ? process.env.PORT : 1337;
 const app = express();
 
 const tweets = [
@@ -33,6 +33,6 @@ app.post('/tweet', function(req, res) {
     res.redirect('/');
 });
 
-app.listen(3000, function(req, res) {
-    console.log("Server started at port ", 3000);
+app.listen(PORT, function(req, res) {
+    console.log("Server started at port ", PORT);
 });
